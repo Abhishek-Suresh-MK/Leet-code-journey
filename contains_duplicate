@@ -1,13 +1,24 @@
+ANSWER:
+class Solution:
+    def containsDuplicate(self, nums):
+        myset=set()
+        for i in range(len(nums)):
+                if(nums[i] in myset):
+                    return True
+                else:
+                    myset.add(nums[i])
+        return False 
 journey:
 so as of starting i again implemented the nested loop
 class Solution:
     def containsNearbyDuplicate(self, nums, k):
         for i in range(len(nums)):
             for j in range(i+1,len(nums)):
-                if(nums[i]==nums[j] and abs(i-j)<=k):
+                if(nums[i]==nums[j]):
                     return True
         return False  
 
   this has complexity of O(n^2)
 #this has to be be reduced so trying it to implement in set
+
 
