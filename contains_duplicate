@@ -21,4 +21,7 @@ class Solution:
   this has complexity of O(n^2)
 #this has to be be reduced so trying it to implement in set
 
+tips:
+could have used sort
+
 
