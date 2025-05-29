@@ -1,0 +1,21 @@
+answer:
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        dicte={}
+        for char in strs:
+            key="".join(sorted(char))
+            if key in dicte:
+                dicte[key].append(char)
+            else:
+                dicte[key]=[char]
+        return list(dicte.values())
+
+journey:
+my first medium level question felt stuck(dumb)
+i took this problem to rocket science level(feeling ashamed)
+kind of depressed used gpt's help(im dumb)
+
+tips i got:
+you could actually make it easier by importing defaultdict (no need to check if key exists)
+
+
