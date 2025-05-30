@@ -1,0 +1,30 @@
+answer:
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        dicte={}
+        sortedkey=[]
+        for char in nums:
+            dicte[char]=dicte.get(char,0)+1
+        sortedkey=sorted(dicte,key=lambda x:dicte[x],reverse=True)
+        return sortedkey[:k]
+
+        
+
+journey:
+misunderstood the question(im careless)
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        dicte={}
+        liste=[]
+        for char in nums:
+            dicte[char]=dicte.get(char,0)+1
+        for char in dicte:
+            if dicte.get(char)>=k:
+                liste.append(char)
+        return liste
+
+tips i got:
+the code can be improved by using the heap sort,bucket sort 
+currently i am following a road map covered by gpt so gpt recommended that even if you dont cover those sorting now you will cover it in the near future.
+
+        
