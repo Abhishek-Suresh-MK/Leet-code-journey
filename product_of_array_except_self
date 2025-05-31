@@ -1,0 +1,12 @@
+JOURNEY:
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        new_list=[]
+        final_list=[]
+        for i in range (len(nums)):
+            temp=1
+            new_list=nums[:i]+nums[i+1:]
+            for j in range(len(new_list)):
+                temp*=new_list[j]
+            final_list.append(temp)
+        return final_list        
