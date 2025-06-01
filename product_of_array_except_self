@@ -1,4 +1,20 @@
+ANSWER:
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        n=len(nums)
+        result=[1]*n
+        prefix=1
+        for i in range(n):
+            result[i]=prefix
+            prefix*=nums[i]
+        suffix=1
+        for i in range(n-1,-1,-1):
+            result[i]*=suffix
+            suffix*=nums[i]
+        return result
+
 JOURNEY:
+THIS WAS MY INTIAL SOLUTION IT HAS O(N^2)
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         new_list=[]
@@ -9,4 +25,9 @@ class Solution:
             for j in range(len(new_list)):
                 temp*=new_list[j]
             final_list.append(temp)
-        return final_list        
+        return final_list 
+
+tips i got:
+got the concept of prefix and suffix(LOOKED UP GPT) 
+feeling kinda sad (being dependent on gpt too much)
+ham honge kamyab
