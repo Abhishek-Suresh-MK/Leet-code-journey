@@ -1,4 +1,22 @@
+answer:
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s2=""
+        s=s.lower()
+        for char in s:
+            if char.isalnum():
+                s2+=char
+        left=0
+        right=len(s2)-1
+        while left<=right:
+            if s2[left]!=s2[right]:
+                return False
+            left+=1
+            right-=1
+        return True
 journey:
+this was a easy one but initially i overdid it (again(deep sigh....)) 
+my initial solution was not optimised so avoided the loop with inbuilt function - isalnum() (noiceee)
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         s2=""
@@ -14,6 +32,12 @@ class Solution:
             left+=1
             right-=1
         return True
+
+tips i got:
+top solution finished in 2 lines
+i am dumb
+this guy simply used this inbuild function with expression for variable in iterable(good approach should use it often)
+and he returned it just by slicing if s==s[::-1]  ( kind of feeling dumb)
         
         
         
