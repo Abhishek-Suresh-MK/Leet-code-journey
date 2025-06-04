@@ -1,0 +1,19 @@
+journey:
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s2=""
+        s=s.lower()
+        for i in range(len(s)):
+            if ord(s[i])>=97 and ord(s[i])<=122 or (ord(s[i]) >= 48 and ord(s[i]) <= 57):
+                s2+=s[i]
+        left=0
+        right=len(s2)-1
+        while left<=right:
+            if s2[left]!=s2[right]:
+                return False
+            left+=1
+            right-=1
+        return True
+        
+        
+        
